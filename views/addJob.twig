@@ -1,0 +1,27 @@
+{% extends 'layout.twig' %}
+{% block addJob %}
+    
+    <form action="/php/job/add" method="post" enctype="multipart/form-data" class="bg-light px-3 py-2">
+    <h1>Nuevo trabajo</h1>
+    <div class="alert alert-success" role="alert">
+    {{ responseMessage }}
+    </div>
+        <div class="d-flex py-2">
+            <label for="title">Trabajo:</label>
+            <input class="form-control ml-1" id="title" type="text" name="title" placeholder="Ingresa un trabajo">
+        </div>
+        <div class="d-flex py-2">
+            <label for="description">Descripción de tu trabajo:</label>
+            <textarea class="form-control ml-1" id="description" row="8" name="description" placeholder="Ingresa una descripción"></textarea>
+        </div>
+        <div class="d-flex py-2">
+            <label for="thumbnail">Descripción de tu trabajo:</label>
+            <input type="file" class="form-control ml-1" id="thumbnail" name="thumbnail">
+        </div>
+        <input type="submit" class="btn btn-success" value="Guardar">
+    </form>
+    <a class="btn btn-warning" href="/php/user/add">Nuevo usuario</a>
+    <a class="btn btn-warning" href="/php/project/add">Nuevo proyecto</a>
+    <a class="btn btn-warning" href="/php">Inicio</a>
+
+{% endblock %}

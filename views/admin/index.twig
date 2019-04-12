@@ -1,0 +1,14 @@
+{% extends 'admin/layoutAdmin.twig' %}
+{% block admin %}
+
+<h1>Administrador</h1>
+
+<ul>
+    <li><a href="/php/admin">Administracion</a></li>
+    <li><a href="/php/logout">Salir</a></li>
+    <a class="btn btn-warning" href="/php/job/add">Nuevo trabajo</a>
+    <a class="btn btn-warning" href="/php/project/add">Nuevo proyecto</a>
+    <a class="btn btn-warning" href="/php/user/add">Nuevo usuario</a>
+</ul>
+
+{% endblock %}
